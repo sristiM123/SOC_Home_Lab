@@ -56,18 +56,7 @@ A deliberate constraint shaped this lab: it runs on a single laptop with **8 GB 
 
 ---
 
-## Lessons that stuck
 
-A running list of the non-obvious things this lab taught me. These are the details that separate following a tutorial from understanding the system.
-
-- **A log reaching the SIEM is not the same as an alert.** Logs are ingested; alerts are only generated when a rule matches. Searching by filename finds nothing — events are categorised by rule group.
-- **Resource limits are a design constraint, not an afterthought.** On 8 GB RAM, the Wazuh indexer's Java heap had to be capped, and heavy components could not run simultaneously. Over-allocating VM memory caused repeated crashes until the totals respected the physical limit.
-- **Check for built-in rules before writing custom ones.** Wazuh already ships rules that handled my firewall drops; my custom rule was useful practice but not strictly necessary.
-- **Firewall logging is per-profile.** Dropped-packet logging enabled only on one profile creates a blind spot for traffic using another profile.
-- **Virtual network topology can hide attacks.** A VM behind NAT scanning the host machine was filtered by the hypervisor before the host firewall ever saw it — a detection blind spot worth understanding. VM-to-VM on the same network worked cleanly.
-- **Tune from live data, not a stale snapshot.** Alert volume is a live stream; diagnosing noise requires watching current activity, not an old screenshot.
-
----
 
 ## Repository structure
 
