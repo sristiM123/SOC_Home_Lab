@@ -1,0 +1,14 @@
+# Never commit secrets or certs
+*.pem
+*.key
+*.crt
+*password*
+*secret*
+*credentials*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
