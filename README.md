@@ -2,7 +2,7 @@
 
 A hands-on Security Operations Center (SOC) lab built from scratch on a single resource-constrained laptop. This repository documents, day by day, how I built a working detection and response pipeline using Wazuh, integrated host telemetry, wrote custom detection logic, automated responses, and simulated and detected real attacks.
 
-The goal is to learn SOC Analyst (L1/L2) skills by doing, and to document the *real* process — including the failures and the debugging — rather than a polished tutorial. Most of the learning here came from things that broke and had to be fixed.
+The goal is to learn SOC Analyst (L1/L2) skills by doing, and to document the *real* process, including the failures and the debugging rather than a polished tutorial. Most of the learning here came from things that broke and had to be fixed.
 
 ---
 
