@@ -1,12 +1,12 @@
 # Firewalls for SOC Analysts: From Home Lab to Enterprise
 
-A complete reference connecting what I built in my home lab (Windows Defender Firewall + Wazuh) to how firewalls work in enterprise SOC environments. Organised so you can see clearly: what transfers directly, what is similar with different terminology, and what is genuinely different.
+A complete reference connecting what I built in my home lab (Windows Defender Firewall + Wazuh) to how firewalls work in enterprise SOC environments. Organized so it is clear: what transfers directly, what is similar with different terminology, and what is genuinely different.
 
 ---
 
 ## Part 1 — The Foundations (these are universal)
 
-These concepts are identical everywhere, from a laptop firewall to a data-centre Palo Alto. Master them once and they apply to every firewall you will ever touch.
+These concepts are identical everywhere, from a laptop firewall to a data-center Palo Alto. 
 
 ### The anatomy of a firewall rule
 
@@ -18,14 +18,14 @@ Every rule, on every firewall, answers the same questions:
 - **Destination** — where it is going.
 - **Service / Port / Protocol** — what kind of traffic (TCP 443, UDP 53, etc.).
 
-In my lab I set these in Windows Defender Firewall. On an enterprise firewall the same five fields exist — they are just presented in a policy table with more columns.
+In my lab I set these in Windows Defender Firewall. On an enterprise firewall, the same five fields exist: they are just presented in a policy table with more columns.
 
-### Drop vs Reject (a distinction enterprise interviews probe)
+### Drop vs Reject (a distinction)
 
 - **Drop** — silently discard the packet; the sender gets no reply (appears as "filtered" in nmap). Preferred at the perimeter because it gives an attacker no information.
-- **Reject** — actively refuse and send back a "denied" response (appears as "closed"). Faster feedback, but reveals the firewall is there.
+- **Reject** — actively refuse and send back a "denied" response (appears as "closed"). Faster feedback, but it reveals the firewall is there.
 
-This is why my Kali nmap scan showed ports as **filtered** — the firewall was dropping, not rejecting.
+This is why my Kali nmap scan showed ports as **filtered**, the firewall was dropping, not rejecting.
 
 ### Stateful vs Stateless
 
