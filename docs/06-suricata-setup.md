@@ -11,7 +11,7 @@ Add network-based intrusion detection to the lab with Suricata, so the SOC can s
 
 ## Background: where Suricata fits
 
-The lab already had host visibility through Wazuh (reading logs) and a firewall (blocking and logging connections). Suricata adds the missing layer — **network intrusion detection**. It inspects the actual packets flowing through a network interface and compares them against known attack patterns called signatures (rules). When traffic matches a rule, Suricata raises an alert.
+The lab already had host visibility through Wazuh (reading logs) and a firewall (blocking and logging connections). Suricata adds the missing layer, **network intrusion detection**. It inspects the actual packets flowing through a network interface and compares them against known attack patterns called signatures (rules). When traffic matches a rule, Suricata raises an alert.
 
 The combined picture:
 
@@ -21,7 +21,7 @@ Wazuh      → reads host logs
 Suricata   → inspects network packets
 ```
 
-Together these give host-level and network-level visibility, which is the model a real SOC operates on.
+Together, these give host-level and network-level visibility, which is the model a real SOC operates on.
 
 ## What I did
 
