@@ -1,4 +1,4 @@
-# Suricata Module 5 — Tuning & Performance (Lab)
+# Tuning & Performance
 
 Hands-on: cutting noise so real threats stand out, and managing the ruleset for performance on constrained hardware.
 
