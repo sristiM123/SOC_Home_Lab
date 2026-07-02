@@ -1,10 +1,10 @@
-# Suricata — Theory & Concepts (Modules 1, 2, 7)
+# Suricata: Theory & Concepts (Modules 1, 2, 7)
 
-Foundational theory for Suricata: how the engine works, how to read a rule, and how Suricata is deployed in production (IDS vs IPS). The hands-on practice — writing rules, reading alerts, tuning, and attack detection — is documented in separate files.
+Foundational theory for Suricata: how the engine works, how to read a rule, and how Suricata is deployed in production (IDS vs IPS). The hands-on practice like writing rules, reading alerts, tuning, and attack detection, is documented in separate files.
 
 ---
 
-## Module 1 — How Suricata Works
+## Module 1: How Suricata Works
 
 ### What Suricata is
 
@@ -14,7 +14,7 @@ Suricata is an **IDS / IPS / NSM** engine:
 - **IPS (Intrusion Prevention System)** — same detection, but can block traffic inline. Active.
 - **NSM (Network Security Monitoring)** — records metadata about all traffic (connections, DNS, TLS, HTTP), not just alerts.
 
-In this lab Suricata runs in **IDS mode** — detecting and alerting, not blocking. This is the right default for learning and for most monitoring deployments.
+In this lab Suricata runs in **IDS mode** : detecting and alerting, not blocking. This is the right default for learning and for most monitoring deployments.
 
 ### How a packet flows through Suricata
 
