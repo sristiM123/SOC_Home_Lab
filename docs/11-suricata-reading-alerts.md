@@ -1,4 +1,4 @@
-# Suricata Module 4 — Reading & Understanding Alerts (Lab)
+# Reading & Understanding Alerts
 
 Hands-on: investigating Suricata alerts using `eve.json`, the structured output, the way an analyst does.
 
