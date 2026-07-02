@@ -164,6 +164,3 @@ This mirrors the lab architecture: Suricata feeding Wazuh, alongside firewall an
 - **Placement** — the sensor only sees what its network position exposes. (A VM behind NAT scanning the host, for example, may be filtered by the hypervisor before the sensor ever sees it — a real blind spot.)
 - **IDS + IPS together** — run IDS broadly, enable IPS-mode drops only for a curated set of high-confidence signatures.
 
-### How to frame it in an interview
-
-> "I deployed Suricata as an IDS, integrated its alerts into a SIEM, wrote and tuned custom rules, and understand the trade-off with IPS mode: IPS can block inline but risks false-positive outages, so most environments run IDS for visibility and apply IPS selectively to high-confidence threats. Placement is critical — the sensor only sees what its network position exposes."
