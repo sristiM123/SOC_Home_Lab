@@ -1,4 +1,4 @@
-# Suricata Module 3 — Writing Custom Rules (Lab)
+# Writing Custom Rules 
 
 Hands-on: writing custom Suricata rules from scratch, testing them, and triggering them from other machines in the lab. All IPs shown are placeholders (`<ubuntu-ip>`).
 
