@@ -1,4 +1,4 @@
-# Suricata: Theory & Concepts (Modules 1, 2, 7)
+# Suricata: Theory & Concepts
 
 Foundational theory for Suricata: how the engine works, how to read a rule, and how Suricata is deployed in production (IDS vs IPS). The hands-on practice like writing rules, reading alerts, tuning, and attack detection, is documented in separate files.
 
