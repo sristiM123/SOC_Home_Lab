@@ -4,7 +4,7 @@ Foundational theory for Suricata: how the engine works, how to read a rule, and 
 
 ---
 
-## Module 1: How Suricata Works
+## How Suricata Works
 
 ### What Suricata is
 
@@ -43,7 +43,7 @@ Rule is the cause; alert is the effect.
 
 ---
 
-## Module 2 — Anatomy of a Suricata Rule
+## Anatomy of a Suricata Rule
 
 Every rule has three parts:
 
@@ -118,7 +118,7 @@ Reading `flow:to_client` and immediately recognising "this is a client-side atta
 
 ---
 
-## Module 7 — IDS vs IPS & Production Deployment
+## IDS vs IPS & Production Deployment
 
 ### The core distinction
 
