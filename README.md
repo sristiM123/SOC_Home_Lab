@@ -22,7 +22,7 @@ A deliberate constraint shaped this lab: it runs on a single laptop with **8 GB 
 | Wazuh Agent | Endpoint sensor, ships logs to the manager | Windows host + Kali VM |
 | Windows Defender Firewall | Host firewall; dropped-packet logs forwarded to Wazuh | Windows host |
 | Kali Linux | Attacker machine for attack simulation | Kali VM |
-| Suricata *(planned)* | Network IDS feeding alerts into Wazuh | Ubuntu VM |
+| Suricata | Network IDS feeding alerts into Wazuh | Ubuntu VM |
 | SOAR — Shuffle *(planned)* | Automated response orchestration | Cloud / isolated |
 
 **Host:** Windows laptop, 8 GB RAM, VMware Workstation Player.
