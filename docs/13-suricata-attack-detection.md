@@ -1,4 +1,4 @@
-# Suricata Module 6 — Real Attack Detection (Lab)
+# Real Attack Detection
 
 Hands-on: generating attack traffic and watching Suricata detect it, both in Suricata's own logs and in the SIEM. Traffic generated from Windows to avoid running a second Linux VM (memory-constrained host).
 
