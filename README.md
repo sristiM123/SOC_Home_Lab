@@ -8,7 +8,7 @@ A hands-on Security Operations Center (SOC) lab, built from the ground up on con
 
 A functioning, end-to-end detection and response environment built and operated by hand: endpoints monitored by agents, a firewall feeding logs into a SIEM, a network intrusion detection system inspecting traffic, custom detection rules, automated response, attack simulation, and threat-intelligence enrichment, all integrated into a single analyst view.
 
-The lab runs on a single laptop with limited RAM. That constraint is deliberate and valuable: it forces real understanding of resource trade-offs, component design, and what can run where, the kind of practical judgment that unlimited cloud resources would hide.
+The lab runs on a single laptop with limited RAM. That constraint is deliberate and valuable: it forces real understanding of resource trade-offs, component design, and what can run where, the kind of practical judgement that unlimited cloud resources would hide.
 
 ---
 
