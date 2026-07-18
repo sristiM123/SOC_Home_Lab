@@ -297,28 +297,6 @@ The rewrite also added proper status-code handling, so any future API error is l
 
 ---
 
-## Research findings (practical constraints of no-budget SOC-AI)
-
-- **Free-tier LLM access is model-restricted.** Several Gemini models returned `limit: 0` — zero free quota — forcing a provider switch. A no-budget integration is constrained not just by rate but by which models are usable at all.
-- **Silent failure is the default.** Naive integration code assumes a success schema and hides real errors. Robust error handling (inspecting status + body) is essential and should be built in from the start.
-- **Scoping is mandatory.** Triggering only on level 10+ prevents the rate-limit flooding seen earlier with VirusTotal. Free tiers cannot absorb per-event LLM calls at real alert volumes.
-- **Hardware caps ambition.** Local models (which would remove rate limits and privacy concerns) do not fit alongside a SIEM on 8GB. Richer prompting strategies (few-shot, chain-of-thought, context enrichment) are limited by free-tier token and rate limits.
-
-### Metrics worth measuring (next steps)
-
-- **Latency** — alert to AI response time.
-- **Verdict agreement** — how often the AI verdict matches the actual rule level.
-- **Accuracy** — whether the plain-English explanation is correct (human-judged).
-- **Consistency** — whether the same alert yields the same verdict across runs.
-
----
-
-## Honest caveats
-
-- The model can be **confidently wrong** — this is an assistant, not a decision-maker.
-- Alert data is sent to a **third-party API** — acceptable in a lab, a real privacy concern in production (a point in favour of local models when hardware allows).
-- Free tiers are **rate-limited** — this design works at lab volume, not production volume.
-
 ## SOC relevance
 
 LLM-assisted triage is an emerging, in-demand capability. Building the integration from scratch — rather than using a black box — demonstrates understanding of how SIEM integrations work, how to design and constrain prompts for machine-readable output, and how to reason honestly about the operational limits (cost, rate limits, privacy, accuracy) of applying AI to security operations.
