@@ -34,22 +34,11 @@ Being fair about the trade-off:
 
 ### The honest conclusion
 
-Grafana does not replace Wazuh's dashboard — it complements it. Wazuh's built-in views remain better for security-specific analysis; Grafana is the right tool when correlating security data with infrastructure telemetry, or when standardising dashboards across an organisation that already runs Grafana.
+Grafana does not replace Wazuh's dashboard — it complements it. Wazuh's built-in views remain better for security-specific analysis; Grafana is the right tool when correlating security data with infrastructure telemetry, or when standardizing dashboards across an organization that already runs Grafana.
 
-For a SOC lab, the value is twofold: a real, separate, widely-used skill, and understanding *when* each tool is the right choice.
 
----
 
-## Resource consideration (important on constrained hardware)
 
-Unlike API-based integrations (VirusTotal, LLM enrichment) which cost almost nothing, **Grafana is a running service**. Measured impact on this lab:
-
-| State | Available RAM |
-|-------|---------------|
-| Before installing Grafana | ~1.8 Gi |
-| With Grafana running | ~1.2 Gi |
-
-Roughly **600 Mi** consumed continuously. On an 8 GB machine also running Wazuh (manager + indexer + dashboard) and Suricata, that is significant.
 
 **Mitigation:** disable autostart and run Grafana only when needed. Dashboards persist on disk, so nothing is lost by stopping the service.
 
